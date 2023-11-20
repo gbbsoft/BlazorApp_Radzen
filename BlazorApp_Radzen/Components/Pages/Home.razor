@@ -1,0 +1,20 @@
+﻿@page "/"
+
+@rendermode InteractiveServer
+
+@inject DialogService DialogService
+
+
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+
+<div class="rz-p-12 rz-text-align-center">
+    <RadzenButton Text="Confirm dialog" ButtonStyle="ButtonStyle.Secondary"
+                  Click=@(args => DialogService.Confirm("Are you sure?", "MyTitle", new ConfirmOptions() { OkButtonText = "Yes", CancelButtonText = "No" })) />
+</div>
+
